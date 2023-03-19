@@ -20,5 +20,14 @@ def quick_sort(arr):
     return quick_sort(left) + middle + quick_sort(right)
 
 
+def bubble_sort(arr):
+    for i in range(1, len(arr)):
+        for j in range(len(arr) - i):
+            if arr[j + 1] < arr[j]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    return arr
+
+
 if __name__ == '__main__':
     print(quick_sort([5, 8, 2, 7, 0, 6, 5, 3]))
+    print(bubble_sort([2, 9, 2, 0, 7, -2, -3]))
